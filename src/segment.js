@@ -1,7 +1,7 @@
 import operation from './operation'
 import SweepEvent from './sweep-event'
 import { isInBbox, getBboxOverlap, getUniqueCorners } from './bbox'
-import { cmp, cmpPoints } from './flp'
+import { cmp, cmp2, cmpPoints } from './flp'
 import { crossProduct, compareVectorAngles, intersection, perpendicular } from './vector'
 
 export default class Segment {
@@ -201,9 +201,9 @@ export default class Segment {
     const v2 = perpendicular(v1)
     const interPt = intersection(this.leftSE.point, v1, point, v2)
 
-    const cmpY = cmp(point.y, interPt.y)
+    const cmpY = cmp2(point.y, interPt.y)
     if (cmpY !== 0) return cmpY
-    return cmp(interPt.x, point.x)
+    return cmp2(interPt.x, point.x)
   }
 
   /**

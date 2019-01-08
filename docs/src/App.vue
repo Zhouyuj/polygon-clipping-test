@@ -17,7 +17,7 @@
         <p>polygon-clipping {{performance}} m/s  </br>
         martinez {{martinezPerf}} m/s  </br>
         jsts {{jstsPerf}} m/s  </br>
-        </p>      
+        </p>
 
       </div>
     </div>
@@ -37,8 +37,8 @@ var inLayer = null
 var outLayer = null
 var map = null
 
-import asia from '../../test/fixtures/asia-with-poly.geojson'
-import parallel from '../../test/end-to-end/almost-parrallel-segments/args.geojson'
+import asia from '../../test/fixtures/segment-overlapping1.geojson'
+import parallel from '../../test/fixtures/segment-overlapping2.geojson'
 import cheese from '../../test/end-to-end/saw-and-cheese/args.geojson'
 
 const fc = JSON.parse(asia)
